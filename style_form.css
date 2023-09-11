@@ -14,12 +14,15 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     color: var(--main-font);
     background-color: var(--light-gray);
+    margin: 100px 30px;
 }
 
 .form {
     max-width: 1024px;
     padding: 50px;
     margin: auto;
+    background-color: white;
+
     display: flex;
     justify-content: center;
 
@@ -31,7 +34,8 @@ body {
 .form__image {
     background-image: url(pictures/mountains-2.jpg);
     width: 40%;
+    height: 800px;
     background-size: cover;
     background-position: bottom;
-    
+
 }
