@@ -19,12 +19,100 @@
 
 <body>
     <div class="form">
-        <div class="form__image">
-        </div>
-        <div class="form__inputs">
+        <div class="form__image"></div> <!--как поставить картинку, а не бэкграунд?-->
+        <form action="https://www.bit-by-bit.ru/form-submit">
+            <div class="form__inputs"> <!--фамилия и имя-->
+                <p class="title-text">Регистрация</p>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="firstName">Имя</label>
+                        <input type="text" id="firstName" name="firstName"/>
+                    </div>
+                    <div class="col-2">
+                        <label for="">Фамилия</label>
+                        <input type="text" id="lastName" name="lastName"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"/>
+                    </div>
+                    <div class="col-2">
+                        <label for="phoneNumber">Телефон</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber"/>
+                    </div>
+                </div>
+            </div>
 
-        </div>
+            <div class="form__inputs"> <!--адрес-->
+                <p class="subtitle-text">Адрес доставки</p>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="country">Страна</label>
+                        <select id="country" name="country">
+                            <option>Россия</option>
+                            <option>Казахстан</option>
+                            <option>Беларусь</option>
+                            <option>Польша</option>
+                            <option>Канада</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="city">Город</label>
+                        <input type="text" id="city" name="city"/>
+                    </div>
+                    <div class="col-3">
+                        <label for="postalCode">Почтовый индекс</label>
+                        <input type="text" id="postalCode" name="postalCode"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <label for="homeAddress">Адрес доставки (улица, дом, квартира)</label>
+                        <input type="text" id="homeAddress" name="homeAddress"/>
+                    </div>
+                </div>
+            </div>    
+            <div class="form__inputs"> <!--акции и скидки-->
+                <p class="subtitle-text">Уведомлять об акциях и скидках</p>
+                <p class="reg-text">Мы не будем отправлять спам, но напишем, когда поступят новые товары или будет большая распродажа.</p>
+                <div class="flex-col">
+                    <!-- <div class="notification">
+                        <input type="checkbox" id="optionEmail" name="notification" value="Email" class="checkbox"/>
+                        <label for="optionEmail">По email</label>
+                    </div>
+                    <div class="notification">
+                        <input type="checkbox" id="optionSMS" name="notification" value="SMS" class="checkbox"/>
+                        <label for="optionSMS">По SMS</label>
+                    </div>
+                    <div class="notification">
+                        <input type="checkbox" id="optionPush" name="notification" value="Push-notification" class="checkbox"/>
+                        <label for="optionPush">Push-уведомления в приложении</label>
+                    </div>    -->
 
+                    <!-- Если оставить name одинаковым для всех трех, как выше, то форма работает не корректно.
+                    Выдает только последнее значение 
+                    Если поставить имена разные для разных опций, то можно не вводить value-->
+
+                    <div class="notification">
+                        <input type="checkbox" id="optionEmail" name="Email-notification" class="checkbox"/>
+                        <label for="optionEmail">По email</label>
+                    </div>
+                    <div class="notification">
+                        <input type="checkbox" id="optionSMS" name="SMS-notification" class="checkbox"/>
+                        <label for="optionSMS">По SMS</label>
+                    </div>
+                    <div class="notification">
+                        <input type="checkbox" id="optionPush" name="Push-notification" class="checkbox"/>
+                        <label for="optionPush">Push-уведомления в приложении</label>
+                    </div>   
+
+                </div>
+            </div>
+            <button type="submit" class="button-submit">Создать аккаунт</button>
+        </form>
+        
     </div>
 </body>
 </html>
